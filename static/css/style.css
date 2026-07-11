@@ -1,0 +1,484 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#F4F7FB;
+
+    color:#2c3e50;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+NAVBAR
+=========================== */
+
+.navbar{
+
+    transition:.4s;
+
+}
+
+.navbar-brand{
+
+    font-size:28px;
+
+}
+
+.nav-link{
+
+    font-weight:500;
+
+    margin-left:15px;
+
+}
+
+.nav-link:hover{
+
+    color:#E50914!important;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    padding:90px 0;
+
+    background:linear-gradient(135deg,#ffffff,#eef4ff);
+
+}
+
+.hero h1{
+
+    font-size:55px;
+
+    font-weight:700;
+
+    color:#222;
+
+    line-height:70px;
+
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    color:#555;
+
+    font-size:20px;
+
+}
+
+.hero img{
+
+    border-radius:25px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+.btn-danger{
+
+background:#E50914;
+
+border:none;
+
+padding:15px 35px;
+
+font-size:18px;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.btn-danger:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(229,9,20,.3);
+
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+.dashboard-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:30px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+height:220px;
+
+}
+
+.dashboard-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.dashboard-card i{
+
+font-size:45px;
+
+color:#E50914;
+
+margin-bottom:20px;
+
+}
+
+.dashboard-card h6{
+
+font-weight:600;
+
+color:#666;
+
+}
+
+.dashboard-card h2{
+
+margin-top:15px;
+
+font-weight:700;
+
+}
+
+/* ===========================
+CHART CARD
+=========================== */
+
+.card{
+
+border:none;
+
+border-radius:20px;
+
+}
+
+.card-body{
+
+padding:35px;
+
+}
+
+canvas{
+
+height:420px!important;
+
+}
+
+/* ===========================
+SUMMARY PANEL
+=========================== */
+
+.card ul{
+
+padding-left:18px;
+
+}
+
+.card li{
+
+margin-top:10px;
+
+}
+
+.card h4{
+
+font-weight:700;
+
+}
+
+.card h5{
+
+font-weight:600;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+margin-top:70px;
+
+background:#101820;
+
+}
+
+footer h5{
+
+font-weight:700;
+
+}
+
+footer p{
+
+color:#d6d6d6;
+
+}
+
+/* ===========================
+ANIMATION
+=========================== */
+
+.dashboard-card{
+
+animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#f2f2f2;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#E50914;
+
+border-radius:50px;
+
+}
+
+/* ===========================
+TABLE
+=========================== */
+
+table{
+
+border-radius:15px;
+
+overflow:hidden;
+
+}
+
+thead{
+
+background:#E50914;
+
+color:white;
+
+}
+
+/* ===========================
+BADGES
+=========================== */
+
+.buy{
+
+background:#198754;
+
+color:white;
+
+padding:8px 20px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+.sell{
+
+background:#dc3545;
+
+color:white;
+
+padding:8px 20px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+.hold{
+
+background:#ffc107;
+
+padding:8px 20px;
+
+border-radius:20px;
+
+font-weight:600;
+
+}
+
+/* ===========================
+LOADING SPINNER
+=========================== */
+
+.loader{
+
+display:none;
+
+width:70px;
+
+height:70px;
+
+border:8px solid #ddd;
+
+border-top:8px solid #E50914;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+line-height:50px;
+
+}
+
+.dashboard-card{
+
+margin-bottom:20px;
+
+height:auto;
+
+}
+
+.hero img{
+
+margin-top:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.navbar-brand{
+
+font-size:22px;
+
+}
+
+}

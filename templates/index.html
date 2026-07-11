@@ -1,0 +1,226 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1>
+
+Predict Tomorrow's
+
+Netflix Stock Price
+
+</h1>
+
+<p>
+
+AI Powered Machine Learning Dashboard
+
+</p>
+
+<button class="btn btn-danger btn-lg"
+
+onclick="predictStock()">
+
+Predict Tomorrow
+
+</button>
+
+</div>
+
+<div class="col-lg-6">
+
+<img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?w=900"
+
+class="img-fluid rounded shadow">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="row g-4 mt-3">
+
+<div class="col-lg-3">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+<h6>
+
+Current Price
+
+</h6>
+
+<h2 id="currentPrice">
+
+--
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-arrow-trend-up"></i>
+
+<h6>
+
+Tomorrow Prediction
+
+</h6>
+
+<h2 id="prediction">
+
+--
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-percent"></i>
+
+<h6>
+
+Expected Change
+
+</h6>
+
+<h2 id="change">
+
+--
+
+</h2>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h6>
+
+Recommendation
+
+</h6>
+
+<h2 id="recommendation">
+
+WAIT
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="row mt-5">
+
+<div class="col-lg-8">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h4>
+
+Historical Stock Price
+
+</h4>
+
+<canvas id="historyChart"></canvas>
+<br>
+
+<div class="card">
+
+<h4>
+7 Day Prediction
+</h4>
+
+<canvas id="forecastChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h4>Prediction Summary</h4>
+
+<hr>
+
+<p>
+Tomorrow Price
+<span id="summaryPrice">--</span>
+</p>
+
+<p>
+Change
+<span id="summaryChange">--</span>
+</p>
+
+<p>
+Confidence
+<span id="confidence">--</span>
+</p>
+
+<p>
+Signal
+<span id="summarySignal">WAIT</span>
+</p>
+
+<hr>
+
+<h5>Why This Prediction?</h5>
+
+<ul id="reasonList">
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

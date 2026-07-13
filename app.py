@@ -5,6 +5,7 @@ from services.predictor import (
     metrics,
     feature_importance
 )
+import os
 
 app = Flask(__name__)
 

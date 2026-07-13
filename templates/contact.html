@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/contact.css') }}">
+
+<div class="contact-section">
+
+<div class="contact-title">
+
+<h1>Contact Us</h1>
+
+<p>
+Have questions about our stock prediction platform ?
+Contact us here.
+</p>
+
+</div>
+
+<div class="contact-container">
+
+<div class="contact-form">
+
+<h2>Send a Message</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input
+type="text"
+id="subject"
+placeholder="Subject">
+
+<textarea
+id="message"
+placeholder="Write your message..."
+required></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+<p id="responseMsg"></p>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+
+
+{% endblock %}

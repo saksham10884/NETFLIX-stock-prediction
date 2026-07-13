@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from services.predictor import (
     predict_next_day,
     forecast_days,
@@ -18,9 +18,27 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("contact.html")
+
+    if request.method == "GET":
+        return render_template("contact.html")
+
+    data = request.get_json()
+
+    name = data.get("name")
+    email = data.get("email")
+    subject = data.get("subject")
+    message = data.get("message")
+
+    print(name)
+    print(email)
+    print(subject)
+    print(message)
+
+    return jsonify({
+        "message": "Thank you! We received your message."
+    })
 
 
 @app.route("/predict")
